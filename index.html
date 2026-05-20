@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Hest Studios — Independent Mobile Game Studio</title>
+<meta name="description" content="Hest Studios is an independent mobile game studio crafting premium, original games for iOS and Android. Creators of Route Tycoon (Dolmuş İmparatoru).">
+<meta name="theme-color" content="#0a0a14">
+<meta property="og:title" content="Hest Studios">
+<meta property="og:description" content="Independent mobile game studio. Crafting original premium games.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://heststudios.github.io">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a14'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23fbbf24'%3EH%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a0a14;
+  --ink-2: #0f172a;
+  --ink-3: #1e293b;
+  --paper: #fef3c7;
+  --paper-dim: rgba(254,243,199,0.7);
+  --gold: #fbbf24;
+  --gold-dim: #d97706;
+  --gold-glow: rgba(251,191,36,0.35);
+  --green: #34d399;
+  --purple: #a855f7;
+  --cyan: #22d3ee;
+  --border: rgba(251,191,36,0.18);
+  --border-bright: rgba(251,191,36,0.5);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(251,191,36,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 80% at 90% 50%, rgba(168,85,247,0.08), transparent 60%),
+    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(34,211,238,0.06), transparent 60%),
+    linear-gradient(180deg, #050510 0%, #0a0a14 30%, #0f172a 100%);
+  background-attachment: fixed;
+}
+
+/* Subtle star field */
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  background: var(--paper);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: twinkle 4s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(40px, 8vw, 80px) clamp(20px, 4vw, 48px);
+}
+
+/* ============ HEADER ============ */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(60px, 12vw, 100px);
+}
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--ink);
+  box-shadow:
+    0 0 20px var(--gold-glow),
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    0 4px 0 #92400e;
+  letter-spacing: -2px;
+}
+.brand-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: var(--paper);
+}
+
+/* ============ HERO ============ */
+.hero {
+  margin-bottom: clamp(80px, 14vw, 120px);
+}
+.hero-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  background: rgba(251,191,36,0.08);
+  border: 1px solid var(--border);
+  padding: 7px 14px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 9vw, 96px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--paper);
+  margin-bottom: 24px;
+  text-shadow: 0 0 40px var(--gold-glow);
+}
+.hero-title .gold {
+  background: linear-gradient(180deg, var(--gold) 30%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--paper-dim);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* ============ SECTION HEADERS ============ */
+.section {
+  margin-bottom: clamp(60px, 10vw, 100px);
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1;
+  letter-spacing: 1.5px;
+  color: var(--paper);
+  margin-bottom: 32px;
+}
+
+/* ============ GAME CARD ============ */
+.game-card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 36px;
+  background: linear-gradient(180deg, rgba(15,23,42,0.7), rgba(10,10,20,0.7));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(24px, 4vw, 40px);
+  position: relative;
+  overflow: hidden;
+}
+.game-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(251,191,36,0.07), transparent 60%);
+  pointer-events: none;
+}
+@media (max-width: 720px) {
+  .game-card { grid-template-columns: 1fr; gap: 24px; }
+}
+
+.game-art {
+  aspect-ratio: 1;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(251,191,36,0.3), transparent 60%),
+    linear-gradient(180deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+.game-art svg {
+  width: 80%;
+  height: 80%;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+}
+
+.game-info { display: flex; flex-direction: column; justify-content: center; }
+.game-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--green);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.game-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4.5vw, 44px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--paper);
+  margin-bottom: 6px;
+}
+.game-subtitle {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  color: var(--paper-dim);
+  font-style: italic;
+  margin-bottom: 18px;
+}
+.game-desc {
+  font-size: 15px;
+  color: var(--paper-dim);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.game-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--paper);
+  background: rgba(254,243,199,0.06);
+  border: 1px solid rgba(254,243,199,0.12);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.game-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid transparent;
+}
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold), var(--gold-dim));
+  color: var(--ink);
+  box-shadow: 0 3px 0 #92400e, 0 6px 14px rgba(251,191,36,0.25);
+}
+.btn-gold:hover { transform: translateY(-1px); box-shadow: 0 4px 0 #92400e, 0 8px 18px rgba(251,191,36,0.35); }
+.btn-gold:active { transform: translateY(2px); box-shadow: 0 1px 0 #92400e; }
+.btn-ghost {
+  background: rgba(254,243,199,0.04);
+  color: var(--paper);
+  border-color: var(--border);
+}
+.btn-ghost:hover { background: rgba(254,243,199,0.08); }
+
+/* ============ COMING SOON ============ */
+.coming-soon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.coming-card {
+  background: linear-gradient(180deg, rgba(15,23,42,0.5), rgba(10,10,20,0.5));
+  border: 1px dashed rgba(254,243,199,0.18);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  color: var(--paper-dim);
+}
+.coming-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+  filter: grayscale(0.6);
+}
+.coming-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: var(--paper);
+  margin-bottom: 4px;
+}
+.coming-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ============ ABOUT ============ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+
+.about-card {
+  background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(10,10,20,0.6));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+.about-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.about-card-body {
+  font-size: 15px;
+  color: var(--paper-dim);
+  line-height: 1.7;
+}
+.about-card-body p + p { margin-top: 12px; }
+
+/* ============ FOOTER ============ */
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  margin-top: clamp(60px, 10vw, 100px);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px clamp(20px, 4vw, 48px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-left {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--paper-dim);
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--paper-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-mail {
+  color: var(--gold);
+}
+.footer-mail:hover { color: var(--paper); }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+
+<main>
+  <!-- Brand -->
+  <div class="brand">
+    <div class="brand-mark">H</div>
+    <div class="brand-name">HEST STUDIOS</div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-tag">Independent Game Studio · Est. 2024</span>
+    <h1 class="hero-title">
+      Crafting <span class="gold">original</span><br>
+      mobile games.
+    </h1>
+    <p class="hero-sub">
+      A one-person studio building premium, hand-crafted experiences for iOS and Android.
+      No clones, no shortcuts — just games we'd actually want to play.
+    </p>
+  </section>
+
+  <!-- Featured Game -->
+  <section class="section">
+    <div class="section-label">— Now Available</div>
+    <h2 class="section-title">Featured</h2>
+
+    <div class="game-card">
+      <div class="game-art">
+        <!-- Minimal mosque + minibus silhouette art -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun -->
+          <circle cx="160" cy="55" r="20" fill="#fbbf24" opacity="0.7"/>
+          <circle cx="160" cy="55" r="14" fill="#fbbf24"/>
+          <!-- Distant hills -->
+          <path d="M 0,130 Q 50,105 100,118 T 200,115 L 200,200 L 0,200 Z" fill="#1a1a2e" opacity="0.7"/>
+          <!-- Mosque silhouette -->
+          <g transform="translate(100 140)">
+            <!-- Minarets -->
+            <rect x="-32" y="-26" width="2.5" height="26" fill="#0a0a14"/>
+            <polygon points="-31.5,-26 -29,-26 -30.5,-33" fill="#0a0a14"/>
+            <rect x="29" y="-26" width="2.5" height="26" fill="#0a0a14"/>
+            <polygon points="29.5,-26 32,-26 31,-33" fill="#0a0a14"/>
+            <!-- Body -->
+            <rect x="-22" y="-15" width="44" height="15" fill="#0a0a14"/>
+            <!-- Dome -->
+            <path d="M -18,-15 Q 0,-32 18,-15 Z" fill="#0a0a14"/>
+            <!-- Crescent -->
+            <line x1="0" y1="-32" x2="0" y2="-38" stroke="#0a0a14" stroke-width="1.5"/>
+            <circle cx="0" cy="-38.5" r="1.2" fill="#0a0a14"/>
+          </g>
+          <!-- Ground -->
+          <rect x="0" y="155" width="200" height="45" fill="#0a0a14"/>
+          <!-- Minibus -->
+          <g transform="translate(70 165)">
+            <rect x="-15" y="-12" width="32" height="14" rx="3" fill="#fbbf24"/>
+            <rect x="-12" y="-9" width="8" height="5" fill="#0a0a14" opacity="0.4"/>
+            <rect x="0" y="-9" width="14" height="5" fill="#0a0a14" opacity="0.4"/>
+            <rect x="-15" y="-5" width="32" height="3" fill="#d97706"/>
+            <circle cx="-9" cy="3" r="3" fill="#0a0a14"/>
+            <circle cx="11" cy="3" r="3" fill="#0a0a14"/>
+          </g>
+          <!-- Road lines -->
+          <line x1="0" y1="175" x2="20" y2="175" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+          <line x1="40" y1="175" x2="60" y2="175" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+          <line x1="135" y1="175" x2="155" y2="175" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+          <line x1="175" y1="175" x2="195" y2="175" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+        </svg>
+      </div>
+
+      <div class="game-info">
+        <div class="game-status">
+          <span class="status-dot"></span>
+          <span>Available Now · iOS</span>
+        </div>
+        <h3 class="game-title">Route Tycoon</h3>
+        <div class="game-subtitle">Dolmuş İmparatoru</div>
+        <p class="game-desc">
+          Build your minibus empire across five iconic cities. From a single route in Istanbul
+          to a transcontinental transit dynasty — manage drivers, hire VIPs, upgrade your fleet,
+          weather the storms, and become the imparator. A premium idle tycoon experience with
+          hand-crafted city scenes and authentic Turkish minibus culture.
+        </p>
+        <div class="game-tags">
+          <span class="game-tag">Idle Tycoon</span>
+          <span class="game-tag">Premium</span>
+          <span class="game-tag">Single Player</span>
+          <span class="game-tag">5 Cities</span>
+        </div>
+        <div class="game-links">
+          <a href="https://apps.apple.com/app/id6768652958" class="btn btn-gold">App Store →</a>
+          <a href="route-tycoon/privacy.html" class="btn btn-ghost">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming -->
+  <section class="section">
+    <div class="section-label">— In Development</div>
+    <h2 class="section-title">What's next</h2>
+
+    <div class="coming-soon">
+      <div class="coming-card">
+        <div class="coming-icon">🎨</div>
+        <div class="coming-title">Slash Pop</div>
+        <div class="coming-status">In Development</div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">✨</div>
+        <div class="coming-title">More to come</div>
+        <div class="coming-status">Stay Tuned</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="section-label">— About</div>
+    <h2 class="section-title">The studio</h2>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-title">Who we are</div>
+        <div class="about-card-body">
+          <p>
+            Hest Studios is an independent one-person mobile game studio based in Turkey.
+            We build games from scratch — no engines we don't understand, no asset packs
+            we didn't make, no mechanics we copied.
+          </p>
+          <p>
+            Every shader, every line of code, every minaret, every city silhouette is
+            hand-crafted. We ship slowly, deliberately, and only when something feels
+            right.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-title">What we make</div>
+        <div class="about-card-body">
+          <p>
+            We focus on <strong>original mobile games</strong> in genres we love: idle tycoon,
+            single-tap reflex, puzzle. We're not chasing trends or rebuilding hits that
+            already exist.
+          </p>
+          <p>
+            If you've played a game like ours before, we did something wrong.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="section-label">— Get in touch</div>
+    <h2 class="section-title">Contact</h2>
+
+    <div class="about-card" style="max-width:600px;">
+      <div class="about-card-body">
+        <p>
+          Questions, feedback, press, or just want to say hello?
+          We read every message.
+        </p>
+        <p style="margin-top:18px;">
+          <a href="mailto:heststudios@gmail.com" class="btn btn-gold">
+            heststudios@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">© 2026 Hest Studios. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:heststudios@gmail.com" class="footer-mail">heststudios@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sprinkle subtle stars across the viewport
+(function() {
+  const container = document.getElementById('stars');
+  const count = 60;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random() * 2 + 1;
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 4 + 's';
+    star.style.animationDuration = (3 + Math.random() * 3) + 's';
+    container.appendChild(star);
+  }
+})();
+</script>
+</body>
+</html>

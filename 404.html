@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Hest Studios</title>
+<meta name="theme-color" content="#0a0a14">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(251,191,36,0.1), transparent 60%),
+    linear-gradient(180deg, #050510 0%, #0a0a14 30%, #0f172a 100%);
+  color: #fef3c7;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.box {
+  max-width: 500px;
+}
+.huge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(80px, 20vw, 140px);
+  line-height: 1;
+  color: #fbbf24;
+  text-shadow: 0 0 40px rgba(251,191,36,0.4);
+  letter-spacing: 3px;
+}
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+.text {
+  font-size: 16px;
+  color: rgba(254,243,199,0.7);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(180deg, #fbbf24, #d97706);
+  color: #0a0a14;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 3px 0 #92400e;
+}
+.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #92400e; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #fbbf24;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="tag">— Error</div>
+  <div class="huge">404</div>
+  <div class="title">Page not found</div>
+  <p class="text">
+    Looks like you took a wrong turn. The route you're looking for doesn't exist
+    on this map.
+  </p>
+  <a href="/" class="btn">Return Home</a>
+</div>
+</body>
+</html>
