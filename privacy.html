@@ -1,389 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>Privacy Policy — Hest Studios</title>
-<meta name="description" content="Privacy Policy for Hest Studios games and services.">
-<meta name="theme-color" content="#0a0a14">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a14'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23fbbf24'%3EH%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy policy for Hest Studios apps: Route Tycoon, Slash Pop, Idle Ferry Empire and others.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A0A10%22/%3E%3Cpolygon points=%2250,12 82,30.5 82,69.5 50,88 18,69.5 18,30.5%22 fill=%22none%22 stroke=%22%23FFD60A%22 stroke-width=%227%22/%3E%3Cline x1=%2240%22 y1=%2232%22 x2=%2240%22 y2=%2268%22 stroke=%22%23FFD60A%22 stroke-width=%228%22 stroke-linecap=%22round%22/%3E%3Cline x1=%2260%22 y1=%2232%22 x2=%2260%22 y2=%2268%22 stroke=%22%23FFD60A%22 stroke-width=%228%22 stroke-linecap=%22round%22/%3E%3Cline x1=%2240%22 y1=%2250%22 x2=%2260%22 y2=%2250%22 stroke=%22%23FFD60A%22 stroke-width=%228%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #0a0a14;
-  --paper: #fef3c7;
-  --paper-dim: rgba(254,243,199,0.7);
-  --paper-faint: rgba(254,243,199,0.5);
-  --gold: #fbbf24;
-  --gold-dim: #d97706;
-  --border: rgba(251,191,36,0.18);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  background: var(--ink);
-  color: var(--paper);
-  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-body {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(251,191,36,0.08), transparent 60%),
-    linear-gradient(180deg, #050510 0%, #0a0a14 30%, #0f172a 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-.nav {
-  border-bottom: 1px solid var(--border);
-  background: rgba(10,10,20,0.85);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-.nav-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--paper);
-}
-.nav-mark {
-  width: 32px; height: 32px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
-  border-radius: 7px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  color: var(--ink);
-  letter-spacing: -1px;
-}
-.nav-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2.5px;
-}
-.nav-back {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: var(--paper-dim);
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.15s;
-}
-.nav-back:hover { color: var(--gold); }
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 60px 24px 80px;
-}
-.title-block {
-  margin-bottom: 50px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--border);
-}
-.title-eyebrow {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--gold);
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px, 8vw, 64px);
-  line-height: 1;
-  letter-spacing: 2px;
-  color: var(--paper);
-  margin-bottom: 16px;
-}
-.title-meta {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--paper-faint);
-  letter-spacing: 1px;
-}
-
-h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(22px, 3.5vw, 28px);
-  letter-spacing: 1.5px;
-  color: var(--gold);
-  margin-top: 48px;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
-h3 {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--paper);
-  margin-top: 24px;
-  margin-bottom: 10px;
-}
-p {
-  margin-bottom: 14px;
-  color: var(--paper-dim);
-  font-size: 15px;
-}
-ul {
-  margin-left: 22px;
-  margin-bottom: 16px;
-  color: var(--paper-dim);
-}
-li {
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-li::marker { color: var(--gold); }
-
-a {
-  color: var(--gold);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(251,191,36,0.4);
-  transition: border-color 0.15s;
-}
-a:hover { border-color: var(--gold); }
-
-strong {
-  color: var(--paper);
-  font-weight: 700;
-}
-
-.highlight-box {
-  background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(10,10,20,0.6));
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 22px 24px;
-  margin: 24px 0;
-}
-.highlight-box p:last-child { margin-bottom: 0; }
-.highlight-box-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: var(--gold);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-footer {
-  border-top: 1px solid var(--border);
-  margin-top: 60px;
-  padding: 24px;
-  text-align: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: var(--paper-faint);
-}
+:root{--bg:#07060b;--ink:#f4f0ea;--dim:rgba(244,240,234,.68);--faint:rgba(244,240,234,.34);
+  --line:rgba(244,240,234,.1);--sun:#ffd60a;--g1:#7e2e91;--g2:#e7445f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:300;
+  -webkit-font-smoothing:antialiased;line-height:1.7}
+::selection{background:var(--sun);color:#07060b}
+a{color:var(--sun)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:clamp(22px,3.2vw,34px) clamp(22px,5.5vw,64px)}
+.wordmark{font-family:'Unbounded';font-weight:800;font-size:14px;letter-spacing:.34em;
+  text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:12px}
+.wordmark svg{color:var(--sun)}
+.wordmark span{color:var(--sun)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{font-family:'Outfit';background:none;border:none;color:var(--faint);
+  padding:7px 13px;font-size:12px;font-weight:500;letter-spacing:.12em;cursor:pointer}
+.lang button.act{background:var(--sun);color:#07060b;font-weight:600}
+main{max-width:760px;margin:0 auto;padding:clamp(30px,6vh,70px) 22px 80px}
+.eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--faint)}
+h1{font-family:'Unbounded';font-weight:800;font-size:clamp(28px,5vw,48px);
+  text-transform:uppercase;margin:14px 0 8px;line-height:1.1}
+.date{color:var(--faint);font-size:14px;margin-bottom:42px}
+h2{font-family:'Unbounded';font-weight:600;font-size:clamp(16px,2.2vw,20px);
+  margin:44px 0 14px;color:var(--ink)}
+p, li{color:var(--dim);font-size:16px;margin-bottom:14px}
+ul{padding-left:22px;margin-bottom:14px}
+li{margin-bottom:8px}
+strong{color:var(--ink);font-weight:500}
+.box{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:rgba(255,255,255,.02);margin:18px 0}
+footer{padding:34px clamp(22px,5.5vw,64px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+footer a{color:var(--faint);text-decoration:none}
+footer a:hover{color:var(--dim)}
+[data-l]{display:none}
+html[lang="en"] [data-l="en"]{display:block}
+html[lang="tr"] [data-l="tr"]{display:block}
+span[data-l], a[data-l]{display:none}
+html[lang="en"] span[data-l="en"], html[lang="en"] a[data-l="en"]{display:inline}
+html[lang="tr"] span[data-l="tr"], html[lang="tr"] a[data-l="tr"]{display:inline}
 </style>
 </head>
 <body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <div class="nav-mark">H</div>
-      <div class="nav-name">HEST STUDIOS</div>
-    </a>
-    <a href="index.html" class="nav-back">← Back</a>
+<nav>
+  <a class="wordmark" href="index.html">
+    <svg width="26" height="26" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="50,9 85.5,29.5 85.5,70.5 50,91 14.5,70.5 14.5,29.5" fill="none" stroke="currentColor" stroke-width="6.5"/>
+      <line x1="38.5" y1="30" x2="38.5" y2="70" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+      <line x1="61.5" y1="30" x2="61.5" y2="70" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+      <line x1="38.5" y1="50" x2="61.5" y2="50" stroke="currentColor" stroke-width="8"/>
+    </svg>
+    HEST<span>·</span>STUDIOS
+  </a>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-lang="en" class="act">EN</button><button data-lang="tr">TR</button>
   </div>
 </nav>
 
 <main>
-  <div class="title-block">
-    <div class="title-eyebrow">— Legal</div>
-    <h1>Privacy Policy</h1>
-    <div class="title-meta">Effective: May 19, 2026 · Hest Studios</div>
-  </div>
+<span class="eyebrow"><span data-l="en">Legal</span><span data-l="tr">Yasal</span></span>
+<h1><span data-l="en" style="display:inline">Privacy Policy</span><span data-l="tr">Gizlilik Politikası</span></h1>
+<p class="date"><span data-l="en">Effective date: June 13, 2026</span><span data-l="tr">Yürürlük tarihi: 13 Haziran 2026</span></p>
 
-  <div class="highlight-box">
-    <div class="highlight-box-label">TL;DR</div>
-    <p>
-      We don't sell your data. We don't track you across other apps. Our games store
-      your progress on your device and use a handful of trusted services (Apple, Google,
-      Firebase, AdMob) to run smoothly. Read on for the full breakdown.
-    </p>
-  </div>
+<!-- ================= EN ================= -->
+<div data-l="en">
+<p>This Privacy Policy applies to all mobile applications published by <strong>Hest Studios</strong> ("we", "us"), including <strong>Route Tycoon</strong>, <strong>Slash Pop</strong>, <strong>Idle Ferry Empire</strong>, and any other apps we release. By using our apps, you agree to this policy.</p>
 
-  <p>
-    This Privacy Policy describes how <strong>Hest Studios</strong> ("we", "us", "our")
-    handles information in connection with our mobile games and this website
-    (collectively, the "Services"). We respect your privacy and are committed to being
-    transparent about what we collect and why.
-  </p>
+<h2>1. Who we are</h2>
+<p>Hest Studios is an independent game developer. For any privacy questions or requests, contact us at <a href="mailto:support@heststudios.com">support@heststudios.com</a>.</p>
 
-  <p>
-    Each of our games may have additional, game-specific privacy notices. This document
-    is the general policy that applies across all Hest Studios products. Where a
-    game-specific policy says something different, that one takes precedence for
-    that game.
-  </p>
+<h2>2. Data we collect</h2>
+<p>Our games do not require an account. We never ask for, or collect, your name, email address, phone number, contacts, photos, or precise location. Your game progress is stored <strong>locally on your device</strong> and is deleted when you delete the app.</p>
+<p>However, our apps include third-party services that may collect limited data automatically:</p>
 
-  <h2>1. Information we collect</h2>
+<div class="box">
+<p><strong>Google AdMob (advertising)</strong></p>
+<ul>
+<li>Device identifiers, such as the Apple advertising identifier (IDFA) — only if you allow tracking via Apple's App Tracking Transparency prompt</li>
+<li>Approximate (city-level) location derived from your IP address</li>
+<li>Ad interaction data (impressions, clicks)</li>
+</ul>
+<p>If you decline tracking, ads are served in non-personalized mode. See <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/9012903" rel="noopener" target="_blank">AdMob partners</a>.</p>
+</div>
 
-  <h3>Information stored on your device</h3>
-  <p>
-    Most of what our games create — your progress, settings, purchased items, in-game
-    preferences — is stored locally on your device. We do not have access to this
-    data unless explicitly synced through a service you authorize (such as iCloud or
-    Game Center).
-  </p>
+<div class="box">
+<p><strong>Google Firebase Analytics</strong></p>
+<ul>
+<li>Anonymous usage events (e.g. sessions, level progress, feature usage)</li>
+<li>Device model, operating system version, country, app version</li>
+</ul>
+<p>We use this data only to understand how our games are played and to improve them.</p>
+</div>
 
-  <h3>Information we collect automatically</h3>
-  <p>
-    When you use our games, we and our service providers may automatically collect
-    certain technical information:
-  </p>
-  <ul>
-    <li>Device model, operating system version, and language</li>
-    <li>App version and crash reports (no personal identifiers attached)</li>
-    <li>Aggregated gameplay analytics (e.g., which features are used, how long sessions last)</li>
-    <li>Approximate region (country-level, derived from IP address)</li>
-    <li>Advertising identifiers (only if you have not opted out via your device settings)</li>
-  </ul>
+<div class="box">
+<p><strong>Apple In-App Purchases</strong></p>
+<p>All payments are processed by Apple. We never receive or store your payment details. Purchases are tied to your Apple ID under <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple's Privacy Policy</a>.</p>
+</div>
 
-  <h3>Information you give us directly</h3>
-  <p>
-    If you contact us by email, we will receive whatever you choose to send —
-    typically your email address and the contents of your message. We use this
-    only to reply to you.
-  </p>
+<h2>3. Tracking and your choices</h2>
+<p>On iOS, we show Apple's App Tracking Transparency prompt before any tracking occurs. You can change your choice at any time in <strong>Settings → Privacy &amp; Security → Tracking</strong>. You can also reset or limit your advertising identifier in iOS settings at any time.</p>
 
-  <h2>2. How we use information</h2>
-  <p>
-    We use the information we collect to:
-  </p>
-  <ul>
-    <li>Keep our games running, fixing crashes and bugs</li>
-    <li>Improve gameplay and design based on what players actually do</li>
-    <li>Show relevant in-game advertisements (in free games)</li>
-    <li>Process in-app purchases via Apple or Google</li>
-    <li>Respond to your support questions</li>
-    <li>Comply with legal obligations</li>
-  </ul>
+<h2>4. Children</h2>
+<p>Our apps are not directed at children under the age of 13 (or the minimum age required in your region). We do not knowingly collect personal data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
 
-  <h2>3. Third-party services we use</h2>
-  <p>
-    Our games rely on a small number of trusted third-party services. Each has its
-    own privacy policy that governs how they handle data:
-  </p>
-  <ul>
-    <li><strong>Apple App Store</strong> — purchases, downloads, App Store reviews</li>
-    <li><strong>Google Play</strong> (on Android) — purchases, downloads</li>
-    <li><strong>Firebase</strong> (by Google) — analytics, crash reporting, remote configuration</li>
-    <li><strong>Google AdMob</strong> — in-game advertising (in free games only)</li>
-    <li><strong>Game Center</strong> (Apple) — leaderboards and achievements, only if you sign in</li>
-    <li><strong>RevenueCat</strong> — purchase verification</li>
-  </ul>
-  <p>
-    We do not share information with these services beyond what is necessary for
-    them to provide their specific function. We do not sell, rent, or trade your
-    personal data with anyone.
-  </p>
+<h2>5. Your rights (GDPR &amp; KVKK)</h2>
+<p>If you are in the European Union, the United Kingdom, or Türkiye, you have the right to request access to, correction of, or deletion of personal data, and to object to processing, under the GDPR and Türkiye's KVKK. Since we hold almost no personal data ourselves, most such data is managed by Google — but email us at <a href="mailto:support@heststudios.com">support@heststudios.com</a> and we will help with any request.</p>
 
-  <h2>4. Advertising</h2>
-  <p>
-    Our free-to-play games show advertisements through <strong>Google AdMob</strong>.
-    These ads may use your device's advertising identifier to show ads more relevant
-    to you. You can opt out of personalized advertising in your device settings:
-  </p>
-  <ul>
-    <li><strong>iOS:</strong> Settings → Privacy & Security → Apple Advertising → Personalized Ads (off), or Settings → Privacy & Security → Tracking</li>
-    <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
-  </ul>
-  <p>
-    Even with personalization off, you will still see ads — they just won't be
-    targeted to your interests.
-  </p>
+<h2>6. Data retention</h2>
+<p>Analytics and advertising data is retained according to Google's data retention policies. Local game data stays on your device until you delete the app.</p>
 
-  <h2>5. In-app purchases</h2>
-  <p>
-    Some of our games offer in-app purchases (such as premium upgrades, gems, or
-    cosmetics). All purchases are processed by <strong>Apple</strong> or
-    <strong>Google</strong>. We never see or store your payment information.
-    Purchase verification is handled by <strong>RevenueCat</strong>.
-  </p>
+<h2>7. Changes to this policy</h2>
+<p>We may update this policy from time to time. The current version will always be available at this page, with the effective date above.</p>
 
-  <h2>6. Children's privacy</h2>
-  <p>
-    Our games are rated for general audiences but are not specifically directed at
-    children under 13. We do not knowingly collect personal information from children
-    under 13. If you believe we have collected such information, please contact us
-    at <a href="mailto:heststudios@gmail.com">heststudios@gmail.com</a> and we will
-    promptly delete it.
-  </p>
+<h2>8. Contact</h2>
+<p>Hest Studios — <a href="mailto:support@heststudios.com">support@heststudios.com</a> — <a href="https://heststudios.com">heststudios.com</a></p>
+</div>
 
-  <h2>7. Your rights</h2>
-  <p>
-    Depending on where you live, you may have certain rights regarding your data:
-  </p>
-  <ul>
-    <li><strong>Access</strong> — ask what we have about you</li>
-    <li><strong>Deletion</strong> — request that we delete your data</li>
-    <li><strong>Correction</strong> — fix anything that's inaccurate</li>
-    <li><strong>Objection</strong> — ask us to stop processing your data</li>
-    <li><strong>Portability</strong> — get your data in a portable format</li>
-  </ul>
-  <p>
-    To exercise any of these rights, email us at
-    <a href="mailto:heststudios@gmail.com">heststudios@gmail.com</a>. We respond
-    within 30 days.
-  </p>
+<!-- ================= TR ================= -->
+<div data-l="tr">
+<p>Bu Gizlilik Politikası, <strong>Hest Studios</strong> ("biz") tarafından yayınlanan tüm mobil uygulamalar için geçerlidir: <strong>Route Tycoon</strong>, <strong>Slash Pop</strong>, <strong>Idle Ferry Empire</strong> ve yayınlayacağımız diğer uygulamalar. Uygulamalarımızı kullanarak bu politikayı kabul etmiş olursunuz.</p>
 
-  <h2>8. Data retention</h2>
-  <p>
-    Analytics data is retained by Firebase for up to 14 months by default. Crash
-    reports are kept for up to 90 days. Data on your device is kept until you
-    uninstall the game or clear its data.
-  </p>
+<h2>1. Biz kimiz</h2>
+<p>Hest Studios bağımsız bir oyun geliştiricisidir. Gizlilikle ilgili her türlü soru ve talebiniz için: <a href="mailto:support@heststudios.com">support@heststudios.com</a></p>
 
-  <h2>9. International data transfers</h2>
-  <p>
-    Our service providers (Google, Apple, RevenueCat) may store and process data
-    outside your country. They each operate under strong privacy frameworks and
-    we rely on the safeguards they provide.
-  </p>
+<h2>2. Topladığımız veriler</h2>
+<p>Oyunlarımız hesap gerektirmez. Adınızı, e-posta adresinizi, telefon numaranızı, rehberinizi, fotoğraflarınızı veya hassas konumunuzu hiçbir zaman istemeyiz ve toplamayız. Oyun ilerlemeniz <strong>yalnızca cihazınızda</strong> saklanır ve uygulamayı sildiğinizde silinir.</p>
+<p>Bununla birlikte uygulamalarımız, sınırlı veriyi otomatik toplayabilen üçüncü taraf servisler içerir:</p>
 
-  <h2>10. Changes to this policy</h2>
-  <p>
-    We may update this policy from time to time. When we do, we will update the
-    "Effective" date at the top. For significant changes, we will provide notice
-    through our games or this website.
-  </p>
+<div class="box">
+<p><strong>Google AdMob (reklam)</strong></p>
+<ul>
+<li>Cihaz tanımlayıcıları, örneğin Apple reklam kimliği (IDFA) — yalnızca Apple'ın Uygulama Takibi Şeffaflığı (ATT) izni verirseniz</li>
+<li>IP adresinizden türetilen yaklaşık (şehir düzeyinde) konum</li>
+<li>Reklam etkileşim verileri (gösterim, tıklama)</li>
+</ul>
+<p>Takip izni vermezseniz reklamlar kişiselleştirilmemiş modda gösterilir. Ayrıntılar: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a> ve <a href="https://support.google.com/admob/answer/9012903" rel="noopener" target="_blank">AdMob iş ortakları</a>.</p>
+</div>
 
-  <h2>11. Contact</h2>
-  <p>
-    Questions about this privacy policy or our data practices?
-    Email us at <a href="mailto:heststudios@gmail.com">heststudios@gmail.com</a>.
-    We read every message.
-  </p>
+<div class="box">
+<p><strong>Google Firebase Analytics</strong></p>
+<ul>
+<li>Anonim kullanım olayları (ör. oturumlar, seviye ilerlemesi, özellik kullanımı)</li>
+<li>Cihaz modeli, işletim sistemi sürümü, ülke, uygulama sürümü</li>
+</ul>
+<p>Bu verileri yalnızca oyunlarımızın nasıl oynandığını anlamak ve geliştirmek için kullanırız.</p>
+</div>
 
-  <div class="highlight-box" style="margin-top:40px;">
-    <div class="highlight-box-label">— Hest Studios</div>
-    <p>
-      We're a small independent studio. If anything in this policy is unclear or
-      you'd like more information, please reach out — we'd rather over-explain
-      than have anyone worried about their data.
-    </p>
-  </div>
+<div class="box">
+<p><strong>Apple Uygulama İçi Satın Almalar</strong></p>
+<p>Tüm ödemeler Apple tarafından işlenir. Ödeme bilgilerinizi hiçbir zaman görmeyiz ve saklamayız. Satın almalar, <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Gizlilik Politikası</a> kapsamında Apple kimliğinize bağlıdır.</p>
+</div>
+
+<h2>3. Takip ve seçimleriniz</h2>
+<p>iOS'ta herhangi bir takip gerçekleşmeden önce Apple'ın ATT iznini gösteririz. Seçiminizi dilediğiniz zaman <strong>Ayarlar → Gizlilik ve Güvenlik → Takip</strong> bölümünden değiştirebilirsiniz. Reklam kimliğinizi de iOS ayarlarından sıfırlayabilir veya sınırlayabilirsiniz.</p>
+
+<h2>4. Çocuklar</h2>
+<p>Uygulamalarımız 13 yaş altı (veya bölgenizdeki asgari yaş sınırının altındaki) çocuklara yönelik değildir. Çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun bize veri sağladığını düşünüyorsanız bizimle iletişime geçin, sileriz.</p>
+
+<h2>5. Haklarınız (GDPR ve KVKK)</h2>
+<p>Avrupa Birliği'nde, Birleşik Krallık'ta veya Türkiye'deyseniz; GDPR ve KVKK kapsamında kişisel verilerinize erişme, düzeltme, silme ve işlemeye itiraz etme hakkınız vardır. Kendi elimizde neredeyse hiç kişisel veri bulunmadığından bu verilerin çoğu Google tarafından yönetilir — ancak <a href="mailto:support@heststudios.com">support@heststudios.com</a> adresine yazın, her talebinizde yardımcı olalım.</p>
+
+<h2>6. Veri saklama</h2>
+<p>Analitik ve reklam verileri Google'ın veri saklama politikalarına göre tutulur. Yerel oyun verileri, uygulamayı silene kadar cihazınızda kalır.</p>
+
+<h2>7. Politika değişiklikleri</h2>
+<p>Bu politikayı zaman zaman güncelleyebiliriz. Güncel sürüm her zaman bu sayfada, yukarıdaki yürürlük tarihiyle birlikte yayınlanır.</p>
+
+<h2>8. İletişim</h2>
+<p>Hest Studios — <a href="mailto:support@heststudios.com">support@heststudios.com</a> — <a href="https://heststudios.com">heststudios.com</a></p>
+</div>
 </main>
 
 <footer>
-  © 2026 Hest Studios · <a href="index.html" style="color:var(--paper-faint);border:none;">Home</a>
+  <span>© 2026 Hest Studios</span>
+  <span><a href="index.html">heststudios.com</a></span>
 </footer>
+
+<script>
+(function(){
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.title = l==='tr' ? 'Gizlilik Politikası — Hest Studios' : 'Privacy Policy — Hest Studios';
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('act', b.dataset.lang===l));
+    try{ localStorage.setItem('hest-lang', l); }catch(e){}
+  }
+  let lang='en';
+  try{ lang = localStorage.getItem('hest-lang') ||
+    ((navigator.language||'').toLowerCase().startsWith('tr') ? 'tr':'en'); }catch(e){}
+  setLang(lang);
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.addEventListener('click', ()=>setLang(b.dataset.lang));
+  });
+})();
+</script>
 </body>
 </html>
