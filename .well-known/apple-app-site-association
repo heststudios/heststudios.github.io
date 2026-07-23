@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["5MBVMG5JY8.com.heststudios.sudokupop"],
+        "components": [
+          { "/": "/join", "?": { "room": "?*" }, "comment": "Surge Sudoku online room invite" }
+        ]
+      }
+    ]
+  }
+}

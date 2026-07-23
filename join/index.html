@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Join a Surge Sudoku race</title>
+<meta name="apple-itunes-app" content="app-id=6785522734">
+<style>
+  :root{color-scheme:light dark}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    background:linear-gradient(160deg,#0e1630,#1b2b57 55%,#26407e);color:#eef2ff;padding:24px;text-align:center}
+  .card{max-width:420px;width:100%}
+  .logo{width:76px;height:76px;border-radius:20px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(150deg,#4f7cff,#7aa2ff);font-size:38px;box-shadow:0 12px 34px rgba(0,0,0,.35)}
+  h1{font-size:22px;margin:0 0 6px;font-weight:800}
+  p{margin:0 0 22px;opacity:.82;font-size:15px;line-height:1.5}
+  .code-label{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.6;margin-bottom:6px}
+  .code{font-size:34px;font-weight:800;letter-spacing:6px;padding:14px 8px;border-radius:16px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);margin-bottom:22px}
+  .btn{display:block;width:100%;padding:15px;border-radius:14px;border:0;font-size:16px;font-weight:700;
+    text-decoration:none;cursor:pointer;margin-bottom:12px;background:#4f7cff;color:#fff;box-shadow:0 8px 22px rgba(79,124,255,.4)}
+  .btn.alt{background:rgba(255,255,255,.1);color:#eef2ff}
+  .hint{font-size:13px;opacity:.6;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">🎯</div>
+  <h1>You're invited to a Surge Sudoku race!</h1>
+  <p>Open the game and enter this room code to join, or install Surge Sudoku first.</p>
+  <div id="codeBox" style="display:none">
+    <div class="code-label">Room code</div>
+    <div class="code" id="code">—</div>
+  </div>
+  <a class="btn" id="storeBtn" href="https://apps.apple.com/app/id6785522734">Get Surge Sudoku</a>
+  <div class="hint">Already have the game? It will open automatically.</div>
+</div>
+<script>
+  (function(){
+    var m=/[?&]room=([A-Za-z0-9]{4,6})/i.exec(location.search||"");
+    var code=m?m[1].toUpperCase():null;
+    if(code){document.getElementById("code").textContent=code;document.getElementById("codeBox").style.display="";}
+    var ua=navigator.userAgent||"";
+    var isAndroid=/Android/i.test(ua);
+    var isIOS=/iPhone|iPad|iPod/i.test(ua);
+    var store=document.getElementById("storeBtn");
+    if(isAndroid){store.href="https://play.google.com/store/apps/details?id=com.heststudios.sudokupop";store.textContent="Get Surge Sudoku on Google Play";}
+    else if(isIOS){store.href="https://apps.apple.com/app/id6785522734";store.textContent="Get Surge Sudoku on the App Store";}
+    // When the app IS installed, iOS/Android intercept this URL before the page loads,
+    // so a visitor who reaches this page does NOT have the app — send them to the right store.
+    if(isIOS||isAndroid){setTimeout(function(){location.replace(store.href);},1200);}
+  })();
+</script>
+</body>
+</html>
