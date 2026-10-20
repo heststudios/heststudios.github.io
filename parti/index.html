@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Parti Gecesi daveti</title>
+<meta name="description" content="Bir Parti Gecesi odasına davet edildin.">
+<meta property="og:title" content="Parti Gecesi'ne davetlisin">
+<meta property="og:description" content="Odaya katılmak için linke dokun.">
+<meta property="og:image" content="https://heststudios.com/parti/gece.png">
+<style>
+  :root{--bg:#F6F6F4;--ink:#1B1F2A;--soft:rgba(27,31,42,.62);--line:#E2E1DE;--card:#fff}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;padding:24px 16px;text-align:center}
+  main{max-width:420px;width:100%}
+  img{width:100%;height:auto;display:block;margin:0 auto 22px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:32px;letter-spacing:-.5px;margin:0 0 8px}
+  p{margin:0 0 22px;color:var(--soft);font-size:15px;line-height:1.5}
+  .label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--soft);margin-bottom:4px}
+  .code{font-family:Georgia,"Times New Roman",serif;font-size:64px;letter-spacing:14px;padding-left:14px;margin-bottom:22px}
+  .btn{display:block;width:100%;padding:16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:17px;font-weight:600;margin-bottom:14px}
+  .note{font-size:13px;color:var(--soft);line-height:1.5;border-top:1px solid var(--line);padding-top:16px;margin-top:6px}
+</style>
+</head>
+<body>
+<main>
+  <img src="gece.png" alt="Gece köyü çizimi">
+  <h1>Parti Gecesi'ne davetlisin!</h1>
+  <p>Arkadaşın bir oda kurdu. Telefonunda Parti Gecesi varsa aşağıdaki düğmeyle doğrudan odaya gir.</p>
+  <div id="kodKutusu" hidden>
+    <div class="label">Oda kodu</div>
+    <div class="code" id="kod">—</div>
+  </div>
+  <a class="btn" id="ac" href="partigecesi://parti">Uygulamada aç</a>
+  <div class="note">Uygulama yüklü değilse: Parti Gecesi yakında App Store'da. Yükledikten sonra ana ekrandaki “Koda katıl”a bu kodu yazman yeterli.</div>
+</main>
+<script>
+  (function () {
+    var m = /[?&]oda=([A-Za-z]{4})(?:&|$)/.exec(location.search || "");
+    if (!m) return;
+    var kod = m[1].toUpperCase();
+    document.getElementById("kod").textContent = kod;
+    document.getElementById("kodKutusu").hidden = false;
+    document.getElementById("ac").href = "partigecesi://parti?oda=" + kod;
+  })();
+</script>
+</body>
+</html>
