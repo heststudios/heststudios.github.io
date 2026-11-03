@@ -76,8 +76,8 @@ h1{font-size:clamp(44px,7.4vw,96px);font-weight:900;letter-spacing:-.03em;line-h
 .world{position:relative;min-height:92vh;display:grid;align-items:center;overflow:hidden;
   border-top:1px solid rgba(0,0,0,.4)}
 .wbg{position:absolute;inset:-6%;background-size:cover;background-position:center 30%;
-  filter:blur(46px) saturate(1.25);transform:scale(1.25);z-index:0}
-.wscrim{position:absolute;inset:0;background:rgba(11,11,16,.52);z-index:1}
+  filter:blur(64px) saturate(1.25);transform:scale(1.25);z-index:0}
+.wscrim{position:absolute;inset:0;background:rgba(11,11,16,.58);z-index:1}
 .win{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:clamp(28px,5vw,80px);
   align-items:center;max-width:1180px;margin:0 auto;width:100%;
   padding:clamp(60px,9vh,100px) clamp(20px,4vw,48px)}
@@ -94,18 +94,17 @@ h1{font-size:clamp(44px,7.4vw,96px);font-weight:900;letter-spacing:-.03em;line-h
   transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
 .store:hover{transform:translateY(-2px) scale(1.02)}
 .store svg{width:16px;height:16px;flex:none}
-.wshots{display:flex;gap:clamp(12px,1.4vw,18px);align-items:flex-start}
-.wshots img{width:clamp(140px,15vw,200px);border-radius:20px;
-  box-shadow:0 30px 60px -22px rgba(0,0,0,.8);
+.wshots{display:flex;gap:clamp(14px,1.6vw,22px);align-items:flex-start}
+.wshots img{width:clamp(140px,min(16vw,26vh),225px);border-radius:22px;
+  box-shadow:0 0 0 1px rgba(245,242,236,.16),0 40px 80px -28px rgba(0,0,0,.85);
   transition:transform .5s cubic-bezier(.2,1,.3,1)}
-.wshots img:first-child{transform:rotate(-2deg)}
-.wshots img:last-child{transform:rotate(2.4deg);margin-top:clamp(24px,3vw,46px)}
-.world:hover .wshots img{transform:rotate(0) translateY(-5px)}
+.world:hover .wshots img{transform:translateY(-6px)}
+.world:hover .wshots img:last-child{transition-delay:.06s}
 @media(max-width:860px){
   .win{grid-template-columns:1fr;text-align:center;gap:30px}
   .wname{justify-content:center}.wdesc{margin-inline:auto}
   .wshots{justify-content:center}
-  .wshots img{width:min(38vw,170px)}
+  .wshots img{width:min(40vw,180px)}
   .world{min-height:auto}
 }
 
@@ -195,8 +194,8 @@ footer .fl a:hover{color:var(--ink)}
       <a class="store" href="https://apps.apple.com/app/id6768652958" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
     <div class="wshots rv">
-      <img src="assets/rt-s1.jpg" width="520" height="1126" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
-      <img src="assets/rt-s2.jpg" width="520" height="1126" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
+      <img src="assets/rt-s1.jpg" width="780" height="1690" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
+      <img src="assets/rt-s2.jpg" width="780" height="1690" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -212,8 +211,8 @@ footer .fl a:hover{color:var(--ink)}
       <a class="store" href="https://apps.apple.com/app/id6764071900" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
     <div class="wshots rv">
-      <img src="assets/sp-s1.jpg" width="520" height="1126" alt="Slash Pop screenshot" loading="lazy" decoding="async">
-      <img src="assets/sp-s2.jpg" width="520" height="1126" alt="Slash Pop screenshot" loading="lazy" decoding="async">
+      <img src="assets/sp-s1.jpg" width="780" height="1690" alt="Slash Pop screenshot" loading="lazy" decoding="async">
+      <img src="assets/sp-s2.jpg" width="780" height="1690" alt="Slash Pop screenshot" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -229,8 +228,8 @@ footer .fl a:hover{color:var(--ink)}
       <a class="store" href="https://apps.apple.com/app/id6779775282" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
     <div class="wshots rv">
-      <img src="assets/ife-s1.jpg" width="520" height="1126" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
-      <img src="assets/ife-s2.jpg" width="520" height="1126" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
+      <img src="assets/ife-s1.jpg" width="780" height="1690" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
+      <img src="assets/ife-s2.jpg" width="780" height="1690" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -246,8 +245,8 @@ footer .fl a:hover{color:var(--ink)}
       <a class="store" href="https://apps.apple.com/app/id6789788348" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
     <div class="wshots rv">
-      <img src="assets/str-s1.jpg" width="520" height="1126" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
-      <img src="assets/str-s2.jpg" width="520" height="1126" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
+      <img src="assets/str-s1.jpg" width="780" height="1690" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
+      <img src="assets/str-s2.jpg" width="780" height="1690" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -263,8 +262,8 @@ footer .fl a:hover{color:var(--ink)}
       <a class="store" href="https://apps.apple.com/app/id6785522734" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
     <div class="wshots rv">
-      <img src="assets/sud-s1.jpg" width="520" height="1126" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
-      <img src="assets/sud-s2.jpg" width="520" height="1126" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
+      <img src="assets/sud-s1.jpg" width="780" height="1690" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
+      <img src="assets/sud-s2.jpg" width="780" height="1690" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
