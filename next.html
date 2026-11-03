@@ -6,292 +6,291 @@
 <title>Hest Studios — Games with soul</title>
 <meta name="description" content="Hest Studios is a one-person game studio between Istanbul and Torino. Five games live on the App Store: Route Tycoon, Slash Pop, Idle Ferry Empire, Striker Tycoon and Surge Sudoku.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0B0B10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230E0E10'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-family='Arial Black,Arial' font-size='54' font-weight='900' fill='%23FFC531'%3EH%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23FFC531'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-family='Arial Black,Arial' font-size='54' font-weight='900' fill='%230B0B10'%3EH%3C/text%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#ffffff; --panel:#F6F5F1; --ink:#0E0E10; --ink2:#403D38; --muted:#716D66;
-  --line:rgba(14,14,16,.12); --gold:#FFC531;
-  --rt:#E84A0C;  --rt-t:#FBEDE6;
-  --sp:#3D5AFE;  --sp-t:#EBEEFD;
-  --ife:#0A87BC; --ife-t:#E7F2F7;
-  --str:#07A05D; --str-t:#E6F4EE;
-  --sud:#0F8A4C; --sud-t:#E9F3EC;
-  --disp:'Archivo',system-ui,sans-serif;
-  --lab:'Space Grotesk',monospace;
+  --bg:#0B0B10; --ink:#F5F2EC; --dim:rgba(245,242,236,.72); --faint:rgba(245,242,236,.45);
+  --line:rgba(245,242,236,.14); --gold:#FFC531;
+  --disp:'Archivo',system-ui,sans-serif; --lab:'Space Grotesk',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--disp);font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--disp);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-::selection{background:var(--gold);color:var(--ink)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
-.lab{font-family:var(--lab);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+::selection{background:var(--gold);color:#0B0B10}
+.lab{font-family:var(--lab);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
 
 /* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);
-  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-  border-bottom:1px solid transparent;transition:border-color .25s}
-nav.stuck{border-color:var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,48px);max-width:1200px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:17px;letter-spacing:-.01em}
-.brand .mk{width:32px;height:32px;border-radius:9px;background:var(--ink);color:var(--gold);
-  display:grid;place-items:center;font-size:17px;font-weight:900;transition:transform .35s cubic-bezier(.2,1.4,.4,1)}
-.brand:hover .mk{transform:rotate(-8deg) scale(1.06)}
-.brand .thin{color:var(--muted);font-weight:600}
-.navr{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px)}
-.nl{font-weight:600;font-size:14.5px;color:var(--ink2);position:relative}
-.nl::after{content:'';position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--ink);transition:right .25s}
-.nl:hover::after{right:0}
-.lang{display:flex;background:var(--panel);border-radius:999px;padding:3px;font-family:var(--lab);font-size:11.5px;font-weight:700}
-.lang button{border:none;background:none;cursor:pointer;padding:5px 11px;border-radius:999px;color:var(--muted);font:inherit;transition:.2s}
-.lang button.act{background:var(--ink);color:#fff}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(18px,3.5vw,44px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.stuck{background:rgba(11,11,16,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:16.5px;letter-spacing:.01em}
+.brand .mk{width:31px;height:31px;border-radius:9px;background:var(--gold);color:#0B0B10;display:grid;place-items:center;
+  font-weight:900;font-size:17px;transition:transform .35s cubic-bezier(.2,1.5,.4,1)}
+.brand:hover .mk{transform:rotate(-8deg)}
+.navr{display:flex;align-items:center;gap:clamp(14px,2.2vw,26px)}
+.nl{font-weight:600;font-size:14px;color:var(--dim)}
+.nl:hover{color:var(--ink)}
+.lang{display:flex;background:rgba(245,242,236,.1);border-radius:999px;padding:3px;font-family:var(--lab);font-size:11px;font-weight:700}
+.lang button{border:none;background:none;cursor:pointer;padding:4px 10px;border-radius:999px;color:var(--faint);font:inherit;transition:.2s}
+.lang button.act{background:var(--ink);color:#0B0B10}
 @media(max-width:700px){.nl{display:none}}
 
-/* ---------- hero ---------- */
-.hero{padding-top:clamp(64px,10vh,120px);padding-bottom:clamp(40px,6vh,64px)}
-.hero .lab{color:var(--muted);display:inline-flex;align-items:center;gap:8px}
-.hero .lab .dot{width:7px;height:7px;border-radius:50%;background:var(--str)}
-h1{font-size:clamp(46px,8vw,104px);font-weight:900;letter-spacing:-.035em;line-height:.98;margin:18px 0 22px}
-h1 .soul{color:var(--ink);position:relative;white-space:nowrap}
-h1 .soul::after{content:'';position:absolute;left:2%;right:0;bottom:.04em;height:.12em;background:var(--gold);z-index:-1;border-radius:3px}
-.sub{font-size:clamp(16px,1.5vw,19px);color:var(--ink2);max-width:36em}
-.sub b{font-weight:700;color:var(--ink)}
-.hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15.5px;
-  padding:14px 24px;border-radius:999px;border:none;cursor:pointer;font-family:inherit;
-  transition:transform .3s cubic-bezier(.2,1.4,.4,1),box-shadow .3s}
-.btn.dark{background:var(--ink);color:#fff;box-shadow:0 10px 24px -12px rgba(14,14,16,.5)}
-.btn.lite{background:var(--panel);color:var(--ink)}
+/* ---------- hero (Supercell pattern: icons flank the wordmark) ---------- */
+.hero{min-height:92vh;display:grid;place-items:center;position:relative;overflow:hidden;
+  padding:110px clamp(18px,4vw,48px) 60px;text-align:center}
+.hero-ico{position:absolute;border-radius:22%;box-shadow:0 24px 50px -18px rgba(0,0,0,.75);
+  animation:bob 7s ease-in-out infinite;will-change:transform}
+.hero-ico img{width:100%;height:100%;border-radius:22%;object-fit:cover}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
+.hi1{width:clamp(74px,9vw,128px);height:clamp(74px,9vw,128px);left:7%;top:24%;--r:-8deg}
+.hi2{width:clamp(58px,7vw,100px);height:clamp(58px,7vw,100px);left:16%;top:58%;--r:6deg;animation-delay:-2s}
+.hi3{width:clamp(50px,6vw,84px);height:clamp(50px,6vw,84px);left:28%;top:36%;--r:-4deg;animation-delay:-4s}
+.hi4{width:clamp(74px,9vw,128px);height:clamp(74px,9vw,128px);right:7%;top:26%;--r:7deg;animation-delay:-1s}
+.hi5{width:clamp(58px,7vw,100px);height:clamp(58px,7vw,100px);right:17%;top:60%;--r:-6deg;animation-delay:-3s}
+.hero-in{position:relative;z-index:2;max-width:760px}
+.hero-in .lab{color:var(--gold)}
+h1{font-size:clamp(44px,7.4vw,96px);font-weight:900;letter-spacing:-.03em;line-height:.98;margin:16px 0 18px}
+.hero-sub{color:var(--dim);font-size:clamp(15.5px,1.4vw,18.5px);max-width:33em;margin:0 auto 28px}
+.hero-sub b{color:var(--ink);font-weight:700}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;font-family:inherit;
+  padding:14px 26px;border-radius:999px;border:none;cursor:pointer;
+  transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.btn.gold{background:var(--gold);color:#0B0B10}
+.btn.ghost{background:rgba(245,242,236,.1);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:scale(.97)}
-.shelf{display:flex;gap:clamp(10px,1.6vw,18px);margin-top:clamp(36px,6vh,56px);flex-wrap:wrap}
-.shelf a{display:block;border-radius:22%;transition:transform .35s cubic-bezier(.2,1.6,.4,1)}
-.shelf a:hover{transform:translateY(-6px) rotate(-3deg)}
-.shelf img{width:clamp(52px,6.4vw,72px);border-radius:22%;box-shadow:0 10px 24px -10px rgba(14,14,16,.35)}
+.hero-scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--faint);z-index:2}
+@media(max-width:760px){
+  .hi3{display:none}
+  .hi1{left:3%;top:16%}.hi2{left:6%;top:70%}.hi4{right:3%;top:18%}.hi5{right:6%;top:72%}
+}
 
-/* ---------- games ---------- */
-.games{padding:clamp(40px,7vh,80px) 0 10px}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:clamp(26px,4vh,40px);flex-wrap:wrap}
-.sec-head h2{font-size:clamp(30px,4.6vw,54px);font-weight:900;letter-spacing:-.03em;line-height:1}
-.sec-head .lab{color:var(--muted)}
-.gcard{--acc:var(--ink);--tint:var(--panel);
-  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center;
-  background:var(--tint);border-radius:28px;padding:clamp(28px,4vw,56px);margin-bottom:22px;overflow:hidden;position:relative}
-.gcard.flip{grid-template-columns:.95fr 1.05fr}
-.gcard.flip .gshots{order:-1}
-.gnum{font-family:var(--lab);font-size:12.5px;font-weight:700;color:var(--acc);letter-spacing:.14em}
-.gname{display:flex;align-items:center;gap:16px;margin:14px 0 12px}
-.gname img{width:clamp(48px,4.6vw,62px);border-radius:22%;box-shadow:0 8px 18px -8px rgba(14,14,16,.4)}
-.gname h3{font-size:clamp(28px,3.6vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1}
-.gtag{font-family:var(--lab);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-top:5px}
-.gdesc{color:var(--ink2);font-size:clamp(15px,1.35vw,17px);max-width:30em;margin-bottom:24px}
-.store{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;
-  font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;
-  transition:transform .3s cubic-bezier(.2,1.4,.4,1),box-shadow .3s;box-shadow:0 10px 22px -12px rgba(14,14,16,.55)}
-.store:hover{transform:translateY(-2px)}
+/* ---------- game worlds (SYBO pattern: full-bleed art sections) ---------- */
+.world{position:relative;min-height:92vh;display:grid;align-items:center;overflow:hidden;
+  border-top:1px solid rgba(0,0,0,.4)}
+.wbg{position:absolute;inset:-6%;background-size:cover;background-position:center 30%;
+  filter:blur(46px) saturate(1.25);transform:scale(1.25);z-index:0}
+.wscrim{position:absolute;inset:0;background:rgba(11,11,16,.52);z-index:1}
+.win{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:clamp(28px,5vw,80px);
+  align-items:center;max-width:1180px;margin:0 auto;width:100%;
+  padding:clamp(60px,9vh,100px) clamp(20px,4vw,48px)}
+.wnum{font-family:var(--lab);font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--gold)}
+.wname{display:flex;align-items:center;gap:18px;margin:14px 0 10px}
+.wname img{width:clamp(56px,5.6vw,78px);border-radius:22%;box-shadow:0 14px 30px -12px rgba(0,0,0,.7)}
+.wname h2{font-size:clamp(34px,5vw,64px);font-weight:900;letter-spacing:-.03em;line-height:1;
+  text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.wtag{font-family:var(--lab);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);display:block;margin-top:6px}
+.wdesc{color:var(--dim);font-size:clamp(15.5px,1.4vw,18px);max-width:26em;margin-bottom:26px;
+  text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.store{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#0B0B10;
+  font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;
+  transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.store:hover{transform:translateY(-2px) scale(1.02)}
 .store svg{width:16px;height:16px;flex:none}
-.gshots{display:flex;gap:clamp(12px,1.6vw,20px);justify-content:center;align-items:flex-start}
-.gshots img{width:clamp(130px,16vw,215px);border-radius:18px;
-  box-shadow:0 24px 48px -20px rgba(14,14,16,.38);
+.wshots{display:flex;gap:clamp(12px,1.4vw,18px);align-items:flex-start}
+.wshots img{width:clamp(140px,15vw,200px);border-radius:20px;
+  box-shadow:0 30px 60px -22px rgba(0,0,0,.8);
   transition:transform .5s cubic-bezier(.2,1,.3,1)}
-.gshots img:last-child{margin-top:clamp(22px,3vw,44px);transform:rotate(2.4deg)}
-.gshots img:first-child{transform:rotate(-1.6deg)}
-.gcard:hover .gshots img{transform:rotate(0) translateY(-4px)}
-.gcard.c-rt{--acc:var(--rt);--tint:var(--rt-t)}
-.gcard.c-sp{--acc:var(--sp);--tint:var(--sp-t)}
-.gcard.c-ife{--acc:var(--ife);--tint:var(--ife-t)}
-.gcard.c-str{--acc:var(--str);--tint:var(--str-t)}
-.gcard.c-sud{--acc:var(--sud);--tint:var(--sud-t)}
-@media(max-width:820px){
-  .gcard,.gcard.flip{grid-template-columns:1fr}
-  .gcard.flip .gshots{order:0}
-  .gshots{margin-top:6px}
-  .gshots img{width:min(40vw,165px)}
-  .gshots img:last-child{margin-top:18px}
+.wshots img:first-child{transform:rotate(-2deg)}
+.wshots img:last-child{transform:rotate(2.4deg);margin-top:clamp(24px,3vw,46px)}
+.world:hover .wshots img{transform:rotate(0) translateY(-5px)}
+@media(max-width:860px){
+  .win{grid-template-columns:1fr;text-align:center;gap:30px}
+  .wname{justify-content:center}.wdesc{margin-inline:auto}
+  .wshots{justify-content:center}
+  .wshots img{width:min(38vw,170px)}
+  .world{min-height:auto}
 }
 
 /* ---------- next up ---------- */
-.next{padding:clamp(28px,5vh,48px) 0}
-.next-in{border:1.5px dashed var(--line);border-radius:22px;padding:clamp(20px,3vw,30px);
-  display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,34px);flex-wrap:wrap;text-align:center}
-.next-in .lab{color:var(--muted)}
-.next-in b{font-weight:900;font-size:clamp(16px,1.8vw,21px);letter-spacing:-.01em}
-.next-in .sep{color:var(--line)}
+.next{padding:clamp(40px,7vh,70px) clamp(20px,4vw,48px);text-align:center;border-top:1px solid var(--line)}
+.next .lab{color:var(--faint)}
+.next-row{display:flex;gap:clamp(16px,4vw,44px);justify-content:center;align-items:baseline;flex-wrap:wrap;margin-top:14px}
+.next-row b{font-weight:900;font-size:clamp(18px,2.4vw,28px);letter-spacing:-.01em;color:var(--dim)}
+.next-row .lab{color:var(--gold)}
 
 /* ---------- studio ---------- */
-.studio{padding:clamp(60px,10vh,120px) 0}
-.studio-in{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(36px,6vw,72px)}
-.studio-in .lab{color:var(--gold)}
-.manif{font-size:clamp(24px,3.6vw,44px);font-weight:800;letter-spacing:-.025em;line-height:1.14;max-width:21ch;margin:16px 0 10px}
+.studio{padding:clamp(70px,11vh,130px) clamp(20px,4vw,48px);border-top:1px solid var(--line);text-align:center}
+.studio .lab{color:var(--gold)}
+.manif{font-size:clamp(26px,4vw,50px);font-weight:900;letter-spacing:-.025em;line-height:1.1;
+  max-width:19ch;margin:18px auto 14px}
 .manif em{font-style:normal;color:var(--gold)}
-.studio-sub{color:rgba(255,255,255,.72);font-size:clamp(14.5px,1.3vw,16.5px);max-width:44em}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(30px,5vh,48px);
-  border-top:1px solid rgba(255,255,255,.16);padding-top:clamp(22px,3.5vh,34px)}
-.facts .n{font-size:clamp(26px,3.4vw,42px);font-weight:900;letter-spacing:-.02em}
-.facts .l{font-family:var(--lab);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:6px}
-@media(max-width:700px){.facts{grid-template-columns:repeat(2,1fr);gap:24px}}
+.studio-sub{color:var(--dim);font-size:clamp(14.5px,1.3vw,16.5px);max-width:42em;margin:0 auto}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:860px;
+  margin:clamp(34px,6vh,54px) auto 0;border-top:1px solid var(--line);padding-top:clamp(24px,4vh,36px)}
+.facts .n{font-size:clamp(24px,3vw,38px);font-weight:900}
+.facts .l{font-family:var(--lab);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:5px}
+@media(max-width:700px){.facts{grid-template-columns:repeat(2,1fr);gap:22px}}
 
 /* ---------- contact / footer ---------- */
-.say{padding:clamp(40px,8vh,100px) 0 40px;text-align:center}
-.say h2{font-size:clamp(38px,6.5vw,84px);font-weight:900;letter-spacing:-.035em;line-height:1}
-.say .mail{display:inline-block;margin-top:18px;font-weight:700;font-size:clamp(17px,2.1vw,26px);
-  border-bottom:3px solid var(--gold);padding-bottom:2px;transition:border-color .25s}
-.say .mail:hover{border-color:var(--ink)}
-footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px;
+.say{padding:clamp(60px,9vh,110px) clamp(20px,4vw,48px) 36px;text-align:center;border-top:1px solid var(--line)}
+.say h2{font-size:clamp(36px,6vw,76px);font-weight:900;letter-spacing:-.03em;line-height:1}
+.say .mail{display:inline-block;margin-top:16px;font-weight:700;font-size:clamp(16px,2vw,24px);
+  color:var(--gold);border-bottom:2px solid var(--gold);padding-bottom:2px}
+.say .mail:hover{color:var(--ink);border-color:var(--ink)}
+footer{max-width:1180px;margin:60px auto 0;padding:24px clamp(20px,4vw,48px) 36px;border-top:1px solid var(--line);
   display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-footer .cop{font-family:var(--lab);font-size:12px;color:var(--muted)}
-footer .fl{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--muted)}
+footer .cop{font-family:var(--lab);font-size:12px;color:var(--faint)}
+footer .fl{display:flex;gap:22px;font-size:14px;color:var(--dim)}
 footer .fl a:hover{color:var(--ink)}
 
 /* ---------- reveal ---------- */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,1,.3,1),transform .7s cubic-bezier(.2,1,.3,1)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,1,.3,1),transform .7s cubic-bezier(.2,1,.3,1)}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}
-  .gshots img,.shelf a,.btn,.store{transition:none}}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-ico{animation:none}
+  .wshots img,.btn,.store{transition:none}
+}
 </style>
 </head>
 <body>
 
-<nav><div class="nav-in">
-  <a class="brand" href="#top"><span class="mk">H</span>HEST<span class="thin">·</span><span class="thin">STUDIOS</span></a>
+<nav>
+  <a class="brand" href="#top"><span class="mk">H</span>HEST STUDIOS</a>
   <div class="navr">
     <a class="nl" href="#games" data-en="Games" data-tr="Oyunlar">Games</a>
     <a class="nl" href="#studio" data-en="Studio" data-tr="Stüdyo">Studio</a>
     <a class="nl" href="#say" data-en="Contact" data-tr="İletişim">Contact</a>
     <div class="lang"><button data-l="en" class="act">EN</button><button data-l="tr">TR</button></div>
   </div>
-</div></nav>
+</nav>
 
 <span id="top"></span>
-<header class="hero wrap">
-  <span class="lab"><span class="dot"></span><span data-en="Independent game studio — Istanbul × Torino" data-tr="Bağımsız oyun stüdyosu — İstanbul × Torino">Independent game studio — Istanbul × Torino</span></span>
-  <h1><span data-en="Games with" data-tr="Ruhu olan">Games with</span> <span class="soul" data-en="soul." data-tr="oyunlar.">soul.</span></h1>
-  <p class="sub" data-en="Hest is a one-person game studio between Istanbul and Torino. &lt;b&gt;Five games live on the App Store&lt;/b&gt; — designed, coded and shipped by the same pair of hands." data-tr="Hest, İstanbul ile Torino arasında tek kişilik bir oyun stüdyosu. &lt;b&gt;App Store'da beş oyun yayında&lt;/b&gt; — hepsi aynı ellerden tasarlanıp, yazılıp, yayınlandı.">Hest is a one-person game studio between Istanbul and Torino. <b>Five games live on the App Store</b> — designed, coded and shipped by the same pair of hands.</p>
-  <div class="hero-cta">
-    <a class="btn dark" href="#games" data-en="Browse the games ↓" data-tr="Oyunlara göz at ↓">Browse the games ↓</a>
-    <a class="btn lite" href="#say" data-en="Say hello" data-tr="Merhaba de">Say hello</a>
+<header class="hero">
+  <span class="hero-ico hi1"><img src="assets/rt-icon.jpg" alt="Route Tycoon"></span>
+  <span class="hero-ico hi2"><img src="assets/ife-icon.jpg" alt="Idle Ferry Empire"></span>
+  <span class="hero-ico hi3"><img src="assets/sud-icon.jpg" alt="Surge Sudoku"></span>
+  <span class="hero-ico hi4"><img src="assets/str-icon.jpg" alt="Striker Tycoon"></span>
+  <span class="hero-ico hi5"><img src="assets/sp-icon.jpg" alt="Slash Pop"></span>
+  <div class="hero-in">
+    <span class="lab" data-en="Independent game studio — Istanbul × Torino" data-tr="Bağımsız oyun stüdyosu — İstanbul × Torino">Independent game studio — Istanbul × Torino</span>
+    <h1 data-en="Games with soul." data-tr="Ruhu olan oyunlar.">Games with soul.</h1>
+    <p class="hero-sub" data-en="Makers of &lt;b&gt;Route Tycoon&lt;/b&gt;, &lt;b&gt;Slash Pop&lt;/b&gt;, &lt;b&gt;Idle Ferry Empire&lt;/b&gt;, &lt;b&gt;Striker Tycoon&lt;/b&gt; and &lt;b&gt;Surge Sudoku&lt;/b&gt; — five games live on the App Store, all from a one-person studio." data-tr="&lt;b&gt;Route Tycoon&lt;/b&gt;, &lt;b&gt;Slash Pop&lt;/b&gt;, &lt;b&gt;Idle Ferry Empire&lt;/b&gt;, &lt;b&gt;Striker Tycoon&lt;/b&gt; ve &lt;b&gt;Surge Sudoku&lt;/b&gt;'nun yapımcısı — App Store'da beş oyun, hepsi tek kişilik bir stüdyodan.">Makers of <b>Route Tycoon</b>, <b>Slash Pop</b>, <b>Idle Ferry Empire</b>, <b>Striker Tycoon</b> and <b>Surge Sudoku</b> — five games live on the App Store, all from a one-person studio.</p>
+    <div class="cta-row">
+      <a class="btn gold" href="#games" data-en="Explore the games" data-tr="Oyunları keşfet">Explore the games</a>
+      <a class="btn ghost" href="#say" data-en="Say hello" data-tr="Merhaba de">Say hello</a>
+    </div>
   </div>
-  <div class="shelf" aria-label="Game icons">
-    <a href="#g-rt"><img src="assets/rt-icon.jpg" width="72" height="72" alt="Route Tycoon"></a>
-    <a href="#g-sp"><img src="assets/sp-icon.jpg" width="72" height="72" alt="Slash Pop"></a>
-    <a href="#g-ife"><img src="assets/ife-icon.jpg" width="72" height="72" alt="Idle Ferry Empire"></a>
-    <a href="#g-str"><img src="assets/str-icon.jpg" width="72" height="72" alt="Striker Tycoon"></a>
-    <a href="#g-sud"><img src="assets/sud-icon.jpg" width="72" height="72" alt="Surge Sudoku"></a>
-  </div>
+  <span class="hero-scroll lab" data-en="Scroll ↓" data-tr="Kaydır ↓">Scroll ↓</span>
 </header>
 
-<main class="wrap">
-<section class="games" id="games">
-  <div class="sec-head rv">
-    <h2 data-en="The games" data-tr="Oyunlar">The games</h2>
-    <span class="lab" data-en="5 live on the App Store" data-tr="App Store'da 5 oyun yayında">5 live on the App Store</span>
-  </div>
+<main id="games">
 
-  <article class="gcard c-rt rv" id="g-rt">
-    <div>
-      <span class="gnum">01</span>
-      <div class="gname"><img src="assets/rt-icon.jpg" width="62" height="62" alt="">
-        <div><h3>Route Tycoon</h3><span class="gtag" data-en="Idle Bus Tycoon" data-tr="Idle Dolmuş Oyunu">Idle Bus Tycoon</span></div>
-      </div>
-      <p class="gdesc" data-en="Istanbul's legendary minibuses — run them, own them. Your empire earns while you sleep." data-tr="İstanbul'un efsane dolmuşları — işlet, sahip ol. İmparatorluğun sen uyurken kazanır.">Istanbul's legendary minibuses — run them, own them. Your empire earns while you sleep.</p>
+<section class="world" id="g-rt">
+  <div class="wbg" style="background-image:url('assets/rt-s1.jpg')"></div>
+  <div class="wscrim"></div>
+  <div class="win">
+    <div class="rv">
+      <span class="wnum" data-en="01 / IDLE BUS TYCOON" data-tr="01 / IDLE DOLMUŞ OYUNU">01 / IDLE BUS TYCOON</span>
+      <div class="wname"><img src="assets/rt-icon.jpg" alt=""><h2>Route Tycoon</h2></div>
+      <p class="wdesc" data-en="Istanbul's legendary minibuses — run them, own them. Your empire earns while you sleep." data-tr="İstanbul'un efsane dolmuşları — işlet, sahip ol. İmparatorluğun sen uyurken kazanır.">Istanbul's legendary minibuses — run them, own them. Your empire earns while you sleep.</p>
       <a class="store" href="https://apps.apple.com/app/id6768652958" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
-    <div class="gshots">
+    <div class="wshots rv">
       <img src="assets/rt-s1.jpg" width="520" height="1126" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
       <img src="assets/rt-s2.jpg" width="520" height="1126" alt="Route Tycoon screenshot" loading="lazy" decoding="async">
     </div>
-  </article>
+  </div>
+</section>
 
-  <article class="gcard c-sp flip rv" id="g-sp">
-    <div>
-      <span class="gnum">02</span>
-      <div class="gname"><img src="assets/sp-icon.jpg" width="62" height="62" alt="">
-        <div><h3>Slash Pop</h3><span class="gtag" data-en="Hyper-casual Arcade" data-tr="Hyper-casual Arcade">Hyper-casual Arcade</span></div>
-      </div>
-      <p class="gdesc" data-en="Slice the right colors, miss once, start over. The fastest 30 seconds on your phone." data-tr="Doğru renkleri kes, bir kez ıskala, baştan başla. Telefonundaki en hızlı 30 saniye.">Slice the right colors, miss once, start over. The fastest 30 seconds on your phone.</p>
+<section class="world" id="g-sp">
+  <div class="wbg" style="background-image:url('assets/sp-s2.jpg')"></div>
+  <div class="wscrim"></div>
+  <div class="win">
+    <div class="rv">
+      <span class="wnum" data-en="02 / HYPER-CASUAL ARCADE" data-tr="02 / HYPER-CASUAL ARCADE">02 / HYPER-CASUAL ARCADE</span>
+      <div class="wname"><img src="assets/sp-icon.jpg" alt=""><h2>Slash Pop</h2></div>
+      <p class="wdesc" data-en="Slice the right colors, miss once, start over. The fastest 30 seconds on your phone." data-tr="Doğru renkleri kes, bir kez ıskala, baştan başla. Telefonundaki en hızlı 30 saniye.">Slice the right colors, miss once, start over. The fastest 30 seconds on your phone.</p>
       <a class="store" href="https://apps.apple.com/app/id6764071900" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
-    <div class="gshots">
+    <div class="wshots rv">
       <img src="assets/sp-s1.jpg" width="520" height="1126" alt="Slash Pop screenshot" loading="lazy" decoding="async">
       <img src="assets/sp-s2.jpg" width="520" height="1126" alt="Slash Pop screenshot" loading="lazy" decoding="async">
     </div>
-  </article>
+  </div>
+</section>
 
-  <article class="gcard c-ife rv" id="g-ife">
-    <div>
-      <span class="gnum">03</span>
-      <div class="gname"><img src="assets/ife-icon.jpg" width="62" height="62" alt="">
-        <div><h3>Idle Ferry Empire</h3><span class="gtag" data-en="Idle Ferry Tycoon" data-tr="Idle Vapur Oyunu">Idle Ferry Tycoon</span></div>
-      </div>
-      <p class="gdesc" data-en="Ferries from the Bosphorus to Sydney — build a fleet, catch the VIPs, ride out the storms." data-tr="Boğaz'dan Sydney'e vapurlar — filo kur, VIP'leri yakala, fırtınaları atlat.">Ferries from the Bosphorus to Sydney — build a fleet, catch the VIPs, ride out the storms.</p>
+<section class="world" id="g-ife">
+  <div class="wbg" style="background-image:url('assets/ife-s1.jpg')"></div>
+  <div class="wscrim"></div>
+  <div class="win">
+    <div class="rv">
+      <span class="wnum" data-en="03 / IDLE FERRY TYCOON" data-tr="03 / IDLE VAPUR OYUNU">03 / IDLE FERRY TYCOON</span>
+      <div class="wname"><img src="assets/ife-icon.jpg" alt=""><h2>Idle Ferry Empire</h2></div>
+      <p class="wdesc" data-en="Ferries from the Bosphorus to Sydney — build a fleet, catch the VIPs, ride out the storms." data-tr="Boğaz'dan Sydney'e vapurlar — filo kur, VIP'leri yakala, fırtınaları atlat.">Ferries from the Bosphorus to Sydney — build a fleet, catch the VIPs, ride out the storms.</p>
       <a class="store" href="https://apps.apple.com/app/id6779775282" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
-    <div class="gshots">
+    <div class="wshots rv">
       <img src="assets/ife-s1.jpg" width="520" height="1126" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
       <img src="assets/ife-s2.jpg" width="520" height="1126" alt="Idle Ferry Empire screenshot" loading="lazy" decoding="async">
     </div>
-  </article>
+  </div>
+</section>
 
-  <article class="gcard c-str flip rv" id="g-str">
-    <div>
-      <span class="gnum">04</span>
-      <div class="gname"><img src="assets/str-icon.jpg" width="62" height="62" alt="">
-        <div><h3>Striker Tycoon</h3><span class="gtag" data-en="Football Tycoon" data-tr="Futbol Tycoon">Football Tycoon</span></div>
-      </div>
-      <p class="gdesc" data-en="Your club, your academy, your penalties — build a football empire one goal at a time." data-tr="Kulübün, akademin, penaltıların — futbol imparatorluğunu gol gol inşa et.">Your club, your academy, your penalties — build a football empire one goal at a time.</p>
+<section class="world" id="g-str">
+  <div class="wbg" style="background-image:url('assets/str-s1.jpg')"></div>
+  <div class="wscrim"></div>
+  <div class="win">
+    <div class="rv">
+      <span class="wnum" data-en="04 / FOOTBALL TYCOON" data-tr="04 / FUTBOL TYCOON">04 / FOOTBALL TYCOON</span>
+      <div class="wname"><img src="assets/str-icon.jpg" alt=""><h2>Striker Tycoon</h2></div>
+      <p class="wdesc" data-en="Your club, your academy, your penalties — build a football empire one goal at a time." data-tr="Kulübün, akademin, penaltıların — futbol imparatorluğunu gol gol inşa et.">Your club, your academy, your penalties — build a football empire one goal at a time.</p>
       <a class="store" href="https://apps.apple.com/app/id6789788348" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
-    <div class="gshots">
+    <div class="wshots rv">
       <img src="assets/str-s1.jpg" width="520" height="1126" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
       <img src="assets/str-s2.jpg" width="520" height="1126" alt="Striker Tycoon screenshot" loading="lazy" decoding="async">
     </div>
-  </article>
+  </div>
+</section>
 
-  <article class="gcard c-sud rv" id="g-sud">
-    <div>
-      <span class="gnum">05</span>
-      <div class="gname"><img src="assets/sud-icon.jpg" width="62" height="62" alt="">
-        <div><h3>Surge Sudoku</h3><span class="gtag" data-en="Classic Sudoku + Live Races" data-tr="Klasik Sudoku + Canlı Yarış">Classic Sudoku + Live Races</span></div>
-      </div>
-      <p class="gdesc" data-en="Pure sudoku, perfected — then race the same board live against real opponents." data-tr="Saf sudoku, kusursuz hali — üstüne aynı tahtada gerçek rakiplere karşı canlı yarış.">Pure sudoku, perfected — then race the same board live against real opponents.</p>
+<section class="world" id="g-sud">
+  <div class="wbg" style="background-image:url('assets/sud-s1.jpg')"></div>
+  <div class="wscrim"></div>
+  <div class="win">
+    <div class="rv">
+      <span class="wnum" data-en="05 / CLASSIC SUDOKU + LIVE RACES" data-tr="05 / KLASİK SUDOKU + CANLI YARIŞ">05 / CLASSIC SUDOKU + LIVE RACES</span>
+      <div class="wname"><img src="assets/sud-icon.jpg" alt=""><h2>Surge Sudoku</h2></div>
+      <p class="wdesc" data-en="Pure sudoku, perfected — then race the same board live against real opponents." data-tr="Saf sudoku, kusursuz hali — üstüne aynı tahtada gerçek rakiplere karşı canlı yarış.">Pure sudoku, perfected — then race the same board live against real opponents.</p>
       <a class="store" href="https://apps.apple.com/app/id6785522734" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span data-en="Download on the App Store" data-tr="App Store'dan indir">Download on the App Store</span></a>
     </div>
-    <div class="gshots">
+    <div class="wshots rv">
       <img src="assets/sud-s1.jpg" width="520" height="1126" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
       <img src="assets/sud-s2.jpg" width="520" height="1126" alt="Surge Sudoku screenshot" loading="lazy" decoding="async">
     </div>
-  </article>
+  </div>
 </section>
 
 <section class="next">
-  <div class="next-in rv">
-    <span class="lab" data-en="Next from the studio" data-tr="Stüdyodan sırada">Next from the studio</span>
-    <b>Last Clearance</b><span class="sep">·</span><b>Pocket Caper</b>
+  <span class="lab" data-en="Next from the studio" data-tr="Stüdyodan sırada">Next from the studio</span>
+  <div class="next-row rv">
+    <b>Last Clearance</b><b>Pocket Caper</b>
     <span class="lab" data-en="In development" data-tr="Geliştirmede">In development</span>
   </div>
 </section>
 
 <section class="studio" id="studio">
-  <div class="studio-in rv">
-    <span class="lab" data-en="The studio" data-tr="Stüdyo">The studio</span>
-    <p class="manif" data-en="No trend-chasing. Just the &lt;em&gt;feeling of a city&lt;/em&gt;, turned into play." data-tr="Trend kovalamak yok. Sadece bir &lt;em&gt;şehrin hissi&lt;/em&gt; — oyuna dönüşmüş.">No trend-chasing. Just the <em>feeling of a city</em>, turned into play.</p>
-    <p class="studio-sub" data-en="Every Hest game starts from a real place — a minibus line, a ferry dock, a football pitch, a quiet puzzle before bed. One person designs, codes, draws and ships all of it." data-tr="Her Hest oyunu gerçek bir yerden başlar — bir dolmuş hattı, bir vapur iskelesi, bir futbol sahası, uyumadan önce sakin bir bulmaca. Hepsini tek kişi tasarlar, yazar, çizer ve yayınlar.">Every Hest game starts from a real place — a minibus line, a ferry dock, a football pitch, a quiet puzzle before bed. One person designs, codes, draws and ships all of it.</p>
-    <div class="facts">
-      <div><div class="n cn" data-n="5">0</div><div class="l" data-en="Games live" data-tr="Yayında oyun">Games live</div></div>
-      <div><div class="n">2026</div><div class="l" data-en="Established" data-tr="Kuruluş">Established</div></div>
-      <div><div class="n">IST×TOR</div><div class="l" data-en="Two cities" data-tr="İki şehir">Two cities</div></div>
-      <div><div class="n cn" data-n="1">0</div><div class="l" data-en="Person studio" data-tr="Kişilik stüdyo">Person studio</div></div>
-    </div>
+  <span class="lab" data-en="The studio" data-tr="Stüdyo">The studio</span>
+  <p class="manif rv" data-en="No trend-chasing. Just the &lt;em&gt;feeling of a city&lt;/em&gt;, turned into play." data-tr="Trend kovalamak yok. Sadece bir &lt;em&gt;şehrin hissi&lt;/em&gt; — oyuna dönüşmüş.">No trend-chasing. Just the <em>feeling of a city</em>, turned into play.</p>
+  <p class="studio-sub rv" data-en="Every Hest game starts from a real place — a minibus line, a ferry dock, a football pitch, a quiet puzzle before bed. One person designs, codes, draws and ships all of it." data-tr="Her Hest oyunu gerçek bir yerden başlar — bir dolmuş hattı, bir vapur iskelesi, bir futbol sahası, uyumadan önce sakin bir bulmaca. Hepsini tek kişi tasarlar, yazar, çizer ve yayınlar.">Every Hest game starts from a real place — a minibus line, a ferry dock, a football pitch, a quiet puzzle before bed. One person designs, codes, draws and ships all of it.</p>
+  <div class="facts rv">
+    <div><div class="n cn" data-n="5">0</div><div class="l" data-en="Games live" data-tr="Yayında oyun">Games live</div></div>
+    <div><div class="n">2026</div><div class="l" data-en="Established" data-tr="Kuruluş">Established</div></div>
+    <div><div class="n">IST×TOR</div><div class="l" data-en="Two cities" data-tr="İki şehir">Two cities</div></div>
+    <div><div class="n cn" data-n="1">0</div><div class="l" data-en="Person studio" data-tr="Kişilik stüdyo">Person studio</div></div>
   </div>
 </section>
 
 <section class="say" id="say">
-  <span class="lab" style="color:var(--muted)" data-en="Press · feedback · hello" data-tr="Basın · geri bildirim · merhaba">Press · feedback · hello</span>
+  <span class="lab" style="color:var(--faint)" data-en="Press · feedback · hello" data-tr="Basın · geri bildirim · merhaba">Press · feedback · hello</span>
   <h2 style="margin-top:12px" data-en="Say hello." data-tr="Merhaba de.">Say hello.</h2>
   <br>
   <a class="mail" href="mailto:support@heststudios.com">support@heststudios.com</a>
@@ -308,7 +307,7 @@ footer .fl a:hover{color:var(--ink)}
 
 <script>
 (function(){
-  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* i18n */
   var TITLES={en:"Hest Studios — Games with soul",tr:"Hest Studios — Ruhu olan oyunlar"};
@@ -316,8 +315,7 @@ footer .fl a:hover{color:var(--ink)}
     document.documentElement.lang=l; document.title=TITLES[l]||document.title;
     document.querySelectorAll('[data-en]').forEach(function(el){
       var v=l==='tr'?el.dataset.tr:el.dataset.en; if(v==null)return;
-      if(v.indexOf('<')>-1) el.innerHTML=v;
-      else el.textContent=v;
+      if(v.indexOf('<')>-1) el.innerHTML=v; else el.textContent=v;
     });
     document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('act',b.dataset.l===l);});
     try{localStorage.setItem('hest-lang',l);}catch(e){}
@@ -329,9 +327,9 @@ footer .fl a:hover{color:var(--ink)}
     b.addEventListener('click',function(){applyLang(b.dataset.l);});
   });
 
-  /* nav hairline */
+  /* nav */
   var nav=document.querySelector('nav');
-  addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>12);},{passive:true});
+  addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>24);},{passive:true});
 
   /* reveals */
   var io=new IntersectionObserver(function(es){es.forEach(function(e){
