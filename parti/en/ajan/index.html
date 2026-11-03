@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Agent Desk invite</title>
+<meta name="description" content="Tap the link to join the room.">
+<meta property="og:title" content="You're invited to a Agent Desk room on Partyo">
+<meta property="og:description" content="Tap the link to join the room.">
+<meta property="og:image" content="https://heststudios.com/parti/en/ajan/kart.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--bg:#F6F6F4;--ink:#1B1F2A;--soft:rgba(27,31,42,.62);--line:#E2E1DE;--accent:#1E6BFF}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;padding:24px 16px;text-align:center}
+  main{max-width:440px;width:100%}
+  img{width:100%;height:auto;display:block;margin:0 auto 22px;border-radius:18px}
+  h1{font-size:30px;letter-spacing:-.5px;margin:0 0 8px;text-wrap:balance}
+  p{margin:0 0 22px;color:var(--soft);font-size:15px;line-height:1.5}
+  .label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--soft);margin-bottom:4px}
+  .code{font-size:60px;font-weight:800;letter-spacing:14px;padding-left:14px;margin-bottom:22px}
+  .btn{display:block;width:100%;padding:16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:17px;font-weight:600;margin-bottom:14px}
+  .note{font-size:13px;color:var(--soft);line-height:1.5;border-top:1px solid var(--line);padding-top:16px;margin-top:6px}
+  .note a{color:var(--ink)}
+</style>
+</head>
+<body>
+<main>
+  <img src="kart.png" alt="Agent Desk">
+  <h1>You're invited to Agent Desk!</h1>
+  <p>Your friend started a Agent Desk room. If you have Partyo, tap the button below to jump straight in.</p>
+  <div id="kodKutusu" hidden>
+    <div class="label">Room code</div>
+    <div class="code" id="kod">—</div>
+  </div>
+  <a class="btn" id="ac" href="partigecesi://parti">Open in the app</a>
+  <div class="note">No Partyo yet? <a href="https://apps.apple.com/app/id6829203091">Get it on the App Store</a>, then tap “Join with code” on the home screen and enter this code.</div>
+</main>
+<script>
+  (function () {
+    var m = /[?&]oda=([A-Za-z]{4})(?:&|$)/.exec(location.search || "");
+    if (!m) return;
+    var kod = m[1].toUpperCase();
+    document.getElementById("kod").textContent = kod;
+    document.getElementById("kodKutusu").hidden = false;
+    document.getElementById("ac").href = "partigecesi://parti?oda=" + kod;
+  })();
+</script>
+</body>
+</html>
